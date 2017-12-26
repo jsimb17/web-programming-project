@@ -1,0 +1,29 @@
+<% provide(:title, 'New Game') %>
+<br><br>
+<h1 id="title"><u>New Game</u></h1><br>
+<div class="row" id="title">
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@schedule) do |f| %>
+            
+        <%= f.label :team1, "Home Team" %>
+        <%= f.text_field :team1 %>
+
+        <%= f.label :team2, "Away Team" %>
+        <%= f.text_field :team2 %>
+
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+
+        <%= f.label :date %>
+        <%= f.date_select :date %>
+
+        <%= f.label :time %>
+        <%= f.time_select :time %>
+   
+        <br>
+            <%= f.submit "Submit Game", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+</div>
+<br>
+<%= link_to 'Back', stats_path %><br>

@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<br><br>
+<h1>Help Requests</h1>
+<br>
+<table class="table-fill">
+  <thead>
+    <tr>
+      <th class="text-left">Subject</th>
+      <th class="text-left">Content</th>
+    </tr>
+  </thead>
+
+  <tbody class="table-hover">
+    <% @helprequests.each do |helprequest| %>
+      <tr>
+        <td class="text-left"><%= helprequest.subject %></td>
+        <td class="text-left"><%= helprequest.content %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

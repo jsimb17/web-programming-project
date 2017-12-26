@@ -1,0 +1,145 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#body1{
+    background: #ccccb3;
+}
+
+#header1 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background: #4d0000;
+    font-size: 20px;
+    color: white;
+}
+
+#pageTitle{
+    text-align: center;
+}
+
+#img2{
+    text-align: center;
+}
+
+#signupbutton {
+    text-align: center;
+}
+
+
+input, textarea, select, .uneditable-input {
+    border: 1px solid blue;
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+input {
+    height: auto;
+}
+
+#buttonText {
+    color: white;
+}
+
+#searchBar {
+    text-align: center;
+    margin-left: 20em;
+    margin-right: 20em;
+}
+
+#icingimg {
+    float: left;
+    margin-right: 3em;
+    margin-left: 8em;
+}
+
+#box {
+    margin-right: 8em;
+    margin-left: 8em;
+    border-bottom: 1px solid grey;
+}
+
+#offsidesimg {
+    float: left;
+    margin-right: 3em;
+    margin-left: 8em;
+}
+
+#faceoffimg {
+    float: left;
+    margin-right: 3em;
+    margin-left: 8em;
+}
+
+#mainimg{
+    float: left;
+    padding-right: 2em;
+    padding-bottom: 1em;
+}
+
+#homebox1 {
+	background: #303030;
+	color: white;
+	margin: 2em 4em 2em 7em;
+	width: 200px;
+	text-align: center;
+	
+}
+
+#homebox1 h3 {
+	margin: 0;
+	text-align: center;
+	padding: 1em 1em;
+	background: #4d0000;
+    color: white;
+}
+
+#homebox2 {
+	background: #303030;
+	color: white;
+	margin: 4em 4em 2em 7em;
+	width: 200px;
+	text-align: center;
+}
+
+#homebox2 h3 {
+	margin: 0;
+	text-align: center;
+	padding: 1em 1em;
+	background: #4d0000;
+    color: white;
+}
+
+#homeP2 {
+    font-size: large;
+}
+
+
+
+#homecontent{
+    width: 60%;
+    padding: 2em 10em 4em 0;
+	float: right;
+	text-align: left;
+}
+
+#contact1 {
+    float: left;
+    margin-left: 12em;
+}
+
+footer{
+    text-align:center;
+    border-top: 1px solid grey;
+    padding-top: 7px;
+    padding-bottom: 20px;
+    
+}
+
+footer small {
+    float: left;
+}
+
+#helpform {
+    margin-left: 10em;
+    padding-left: 5em;
+}

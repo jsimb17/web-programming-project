@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body id="body1">
+    <br>
+    <header class="navbar navbar-fixed-top navbar-inverse" id="header1">
+      <div class="container">
+      <nav id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><%= link_to "Home", 'https://models-workspace-jsimbartl.c9users.io/controller1/home' %></li>
+          <li><%= link_to "About", 'https://models-workspace-jsimbartl.c9users.io/controller1/about' %></li>
+          <li><%= link_to "Schedule", 'https://models-workspace-jsimbartl.c9users.io/schedules' %></li>
+          <li><%= link_to "Player Stats", 'https://models-workspace-jsimbartl.c9users.io/stats' %></li>
+          <li><%= link_to "Users", 'https://models-workspace-jsimbartl.c9users.io/users' %></li>
+          <li><%= link_to "Help", 'https://models-workspace-jsimbartl.c9users.io/helprequests/new' %></li>
+          <% if logged_in? %>
+            <li><%= link_to "Log out", logout_path, method: :delete %></li>
+            </ul>
+          <% else %>
+            <li><%= link_to "Login", login_path %></li>
+            <li><%= link_to "Sign Up", 'https://models-workspace-jsimbartl.c9users.io/users/new' %></li>
+          <% end %>
+        </ul>
+      </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+       <br><br>
+      <footer class = "footer">
+        <small>
+          This site was created by Jenn Simbartl.
+        </small>
+      </footer>
+    </div>
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%=message %></div>
+      <% end %>
+      <% flash.clear %>
+    </div>
+  </body>
+</html>
+

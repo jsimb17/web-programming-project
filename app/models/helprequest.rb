@@ -1,0 +1,2 @@
+class Helprequest < ApplicationRecord
+end

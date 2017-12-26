@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+<br><br><br>
+<p>
+  <strong>Player Name:</strong>
+  <%= @stat.playername %>
+</p>
+
+<p>
+  <strong>Team:</strong>
+  <%= @stat.team %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @stat.position %>
+</p>
+
+<p>
+  <strong>Goals:</strong>
+  <%= @stat.goals %>
+</p>
+
+<p>
+  <strong>Assists:</strong>
+  <%= @stat.assists %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @stat.points %>
+</p>
+
+<p>
+  <strong>Penalty Minutes:</strong>
+  <%= @stat.penaltymin %>
+</p>
+
+<p>
+  <strong>Shots:</strong>
+  <%= @stat.shots %>
+</p>
+<br>
+
+<%= link_to 'Edit', edit_stat_path(@stat) %> |
+<%= link_to 'Back', stats_path %>

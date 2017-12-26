@@ -1,0 +1,37 @@
+<% provide(:title, 'New Player Stat') %>
+<br><br>
+<h1 id="title">New Player Stat</h1><br>
+<div class="row" id="title">
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@stat) do |f| %>
+            
+            <%= f.label :playername, "Player Name" %>
+            <%= f.text_field :playername %>
+
+            <%= f.label :team %>
+            <%= f.text_field :team %>
+
+            <%= f.label :position %>
+            <%= f.text_field :position %>
+
+            <%= f.label :goals %>
+            <%= f.text_field :goals %>
+  
+            <%= f.label :assists %>
+            <%= f.text_field :assists %>
+ 
+            <%= f.label :points %>
+            <%= f.text_field :points %>
+ 
+            <%= f.label :penaltymin, "Penalty Minutes" %>
+            <%= f.text_field :penaltymin %>
+  
+            <%= f.label :shots %>
+            <%= f.text_field :shots %>
+            
+        <br>
+            <%= f.submit "Submit New Player Stat", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+</div>
+<%= link_to 'Back', stats_path %><br>

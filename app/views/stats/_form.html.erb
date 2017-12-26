@@ -1,0 +1,57 @@
+<%= form_with(model: stat, local: true) do |form| %>
+  <% if stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(stat.errors.count, "error") %> prohibited this stat from being saved:</h2>
+
+      <ul>
+      <% stat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :playername, "Player Name" %>
+    <%= form.text_field :playername, id: :stat_playername %>
+  </div>
+
+  <div class="field">
+    <%= form.label :team %>
+    <%= form.text_field :team, id: :stat_team %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.text_field :position, id: :stat_position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goals %>
+    <%= form.text_field :goals, id: :stat_goals %>
+  </div>
+
+  <div class="field">
+    <%= form.label :assists %>
+    <%= form.text_field :assists, id: :stat_assists %>
+  </div>
+
+  <div class="field">
+    <%= form.label :points %>
+    <%= form.text_field :points, id: :stat_points %>
+  </div>
+
+  <div class="field">
+    <%= form.label :penaltymin, "Penalty Minutes" %>
+    <%= form.text_field :penaltymin, id: :stat_penaltymin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :shots %>
+    <%= form.text_field :shots, id: :stat_shots %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

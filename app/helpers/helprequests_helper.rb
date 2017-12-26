@@ -1,0 +1,2 @@
+module HelprequestsHelper
+end

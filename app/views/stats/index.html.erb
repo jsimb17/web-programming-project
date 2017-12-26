@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+<br><br>
+<h1 id="title">Player Stats</h1>
+<br>
+<%= link_to 'Add New Player Stat', 'https://models-workspace-jsimbartl.c9users.io/stats/new', class: "btn btn-lg btn-primary", id: "buttonText" %>
+<br><br>
+<div id="searchBar">
+            <%= form_tag(controller: "stats", action: "display", :method => "post", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: " Search for Player" %>  <%= submit_tag "Search" %>
+            <% end %>
+          </div>
+<table class="table-fill">
+  <thead>
+    <tr>
+      <th class="text-left">Player</th>
+      <th class="text-left">Team</th>
+      <th class="text-left">Position</th>
+      <th class="text-left">Goals</th>
+      <th class="text-left">Assists</th>
+      <th class="text-left">Points</th>
+      <th class="text-left">Penalty Min.</th>
+      <th class="text-left">Shots</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody class="table-hover">
+    <% @stats.each do |stat| %>
+      <tr>
+        <td class="text-left"><%= stat.playername %></td>
+        <td class="text-left"><%= stat.team %></td>
+        <td class="text-left"><%= stat.position %></td>
+        <td class="text-left"><%= stat.goals %></td>
+        <td class="text-left"><%= stat.assists %></td>
+        <td class="text-left"><%= stat.points %></td>
+        <td class="text-left"><%= stat.penaltymin %></td>
+        <td class="text-left"><%= stat.shots %></td>
+        <td class="text-left"><%= link_to 'Edit', edit_stat_path(stat) %></td>
+        <td class="text-left"><%= link_to 'Delete', stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
